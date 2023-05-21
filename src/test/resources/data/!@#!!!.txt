@@ -1,0 +1,50 @@
+Feature: Uploading feature
+
+  Scenario: User uploads a file successfully
+    Given the user is on the file upload page
+    And the information box of file size showing "Select file to send(max 196.45 MB)"
+    When the user a file to upload
+    And checks the I accept terms of service checkbox
+    And clicks on the Submit File button
+    Then the uploaded file should be displayed in the text box
+    And the message "1 file has been successfully uploaded" should be shown
+
+#  Scenario: User cancels file selection
+#    Given the user is on the file upload page
+#    When the user clicks on the "Choose File" button
+#    And cancels the file selection
+#    Then the text box should display "No file chosen"
+#
+#  Scenario: User tries to submit without selecting a file
+#    Given the user is on the file upload page
+#    When the user clicks on the "Submit File" button without selecting a file
+#    Then an error message should be displayed indicating that a file must be chosen
+#
+#  Scenario: User tries to submit without accepting terms of service
+#    Given the user is on the file upload page
+#    When the user selects a file to upload
+#    And clicks on the "Submit File" button without accepting terms of service
+#    Then an error message should be displayed indicating that terms of service must be accepted
+#
+#  Scenario: User uploads a large file
+#    Given the user is on the file upload page
+#    When the user selects a large file to upload (larger than 196.45 MB)
+#    And checks the I accept terms of service checkbox
+#    And clicks on the "Submit File" button
+#    Then an error message should be displayed indicating that the file exceeds the maximum allowed size
+#
+#  Scenario: User uploads a file with a long filename
+#    Given the user is on the file upload page
+#    When the user selects a file with a long filename to upload
+#    And checks the I accept terms of service checkbox
+#    And clicks on the "Submit File" button
+#    Then the uploaded file should be displayed in the text box
+#    And the message "1 file has been successfully uploaded" should be shown
+#
+#  Scenario: User uploads a file with a special character in the filename
+#    Given the user is on the file upload page
+#    When the user selects a file with a special character in the filename to upload
+#    And checks the I accept terms of service checkbox
+#    And clicks on the "Submit File" button
+#    Then the uploaded file should be displayed in the text box
+#    And the message "1 file has been successfully uploaded" should be shown
